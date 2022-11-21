@@ -68,20 +68,53 @@ table {
   margin-top: 3rem;
   padding: 0;
   width: 100%;
-  table-layout: auto;
+  table-layout: fixed;
 }
 table th,
 table td {
   padding: .625em;
   text-align: center;
+  overflow: scroll;
 }
 table th {
   font-size: .85em;
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-
+td{
+  overflow: scroll;
+}
+.results {
+  padding-top: 15px;
+}
+.Hotel-Info {
+  list-style-type: none;
+}
+.Card{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Card div{
+  display: flex;
+  flex-direction: column;
+}
+.Card-img {
+  height: 13rem;
+  padding: 0;
+  margin: 0;
+}
+.Footer {
+  grid-row: 4;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  text-align: end;
+}
 @media screen and (max-width: 600px) {
+  .search{
+    display: flex;
+    flex-direction: column;
+  }
   table {
     border: 0;
   }
@@ -127,30 +160,4 @@ table th {
   td{
     overflow: scroll;
   }
-}
-.results {
-  padding-top: 15px;
-}
-.Hotel-Info {
-  list-style-type: none;
-}
-.Card{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.Card div{
-  display: flex;
-  flex-direction: column;
-}
-.Card-img {
-  height: 13rem;
-  padding: 0;
-  margin: 0;
-}
-.Footer {
-  grid-row: 4;
-  grid-column: 1 / -1;
-  padding: 2rem;
-  text-align: end;
 }
