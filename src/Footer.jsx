@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = props => (
-  <div>
+  <div className="Footer">
     <footer>
       <ul className="Hotel-Info">
         {props.info.map((item, i) => (
