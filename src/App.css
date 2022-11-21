@@ -1,0 +1,84 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+.Header-div{
+  background-color: black;
+  margin-bottom: 2rem;
+}
+header{
+  background-color: white;
+}
+.Logo {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.Tourist-Info-Cards {
+  display: flex;
+  align-items: center;
+}
+.App-content{
+  background-color: ivory;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+.search {
+  padding: 20px 40px;
+  background-color:  #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+}
+table{
+  border-collapse: collapse;
+  margin-top: 3rem;
+}
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+table tr:hover {
+  background-color: #ddd;
+}
+thead{
+  background-color: #ddd;
+}
+tr {
+  color: #5b5757;
+  text-align: center;
+}
+th{
+  padding: 2rem;
+}
+td{
+  padding: 1rem;
+}
+table, td, th {
+  border: 1px solid;
+}
+.results {
+  padding-top: 15px;
+}
+.Hotel-Info {
+  list-style-type: none;
+}
+.Card{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.Card div{
+  display: flex;
+  flex-direction: column;
+}
+.Card-img {
+  width: 25rem;
+  max-height: 15rem
+}
+.Search-Results{
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  padding-top: 20px;
+  text-align: center;
+}
