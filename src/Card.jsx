@@ -2,9 +2,9 @@ import React from "react";
 
 const Card = (props) => (
   <div className="Card">
-    {props.toVisit.map((place) => {
+    {props.toVisit.map((place, i) => {
       return (
-        <div>
+        <div key={i}>
           <img
             className="Card-img"
             src={require(`./images/${place.src}.jpg`)}
