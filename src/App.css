@@ -74,7 +74,6 @@ table th,
 table td {
   padding: .625em;
   text-align: center;
-  overflow: scroll;
 }
 table th {
   font-size: .85em;
@@ -82,7 +81,6 @@ table th {
   text-transform: uppercase;
 }
 td{
-  overflow: scroll;
 }
 .results {
   padding-top: 15px;
@@ -104,8 +102,15 @@ td{
   padding: 0;
   margin: 0;
 }
-.Footer {
+.Restaurant-div{
   grid-row: 4;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Footer {
+  grid-row: 5;
   grid-column: 1 / -1;
   padding: 2rem;
   text-align: end;

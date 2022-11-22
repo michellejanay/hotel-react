@@ -1,10 +1,10 @@
 import React from "react";
-import destinations from "./desinations"
+import destinations from "../desinations";
 import Card from "./Card";
 
 const TouristInfoCards = () => (
   <div className="Card-Holder">
-    <Card toVisit={destinations}/>
+    <Card toVisit={destinations} />
   </div>
 );
 

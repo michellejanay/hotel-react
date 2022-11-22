@@ -7,7 +7,7 @@ const Card = (props) => (
         <div key={i}>
           <img
             className="Card-img"
-            src={require(`./images/${place.src}.jpg`)}
+            src={require(`../images/${place.src}.jpg`)}
             alt={place.name}
           />
           <a
