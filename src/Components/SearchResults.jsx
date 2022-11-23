@@ -3,6 +3,12 @@ import moment from "moment/moment";
 
 const SearchResults = (props) => {
   const [clicked, setClicked] = useState(false);
+  const handleClick = (event) =>
+    setClicked(
+      event.target.classList.contains("clicked")
+        ? event.target.classList.remove("clicked")
+        : event.target.classList.add("clicked")
+    );
 
   return (
     <div className="Search-Results">
@@ -22,7 +28,12 @@ const SearchResults = (props) => {
         </thead>
         <tbody>
           {props.results.map((info, i) => (
-            <tr key={i}>
+            <tr
+              key={i}
+              onClick={(event) => {
+                handleClick(event);
+              }}
+            >
               <td>{info.id}</td>
               <td>{info.title}</td>
               <td>{info.firstName}</td>
