@@ -24,7 +24,7 @@ const SearchResults = props => (
             <td>{info.title}</td>
             <td>{info.firstName}</td>
             <td>{info.surname}</td>
-            <td>{info.email}</td>
+            <td className="Email-td">{info.email}</td>
             <td>{info.roomId}</td>
             <td>{info.checkInDate}</td>
             <td>{info.checkOutDate}</td>
