@@ -103,6 +103,10 @@ table th {
   background-color: black;
   color: white;
 }
+.notClicked{
+  background-color: white;
+  color: black;
+}
 .Hotel-Info {
   list-style-type: none;
 }
