@@ -57,9 +57,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-table tr:nth-child(even) {
+/* table tr:nth-child(even) {
   background-color: #f2f2f2;
-}
+} */
 table tr:hover {
   background-color: #ddd;
 }
@@ -100,12 +100,11 @@ table th {
   padding-top: 15px;
 }
 .clicked {
-  background-color: black;
-  color: white;
+  background-color: violet;
+  color: black;
 }
 .notClicked{
   background-color: white;
-  color: black;
 }
 .Hotel-Info {
   list-style-type: none;
