@@ -57,12 +57,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-table tr:hover {
-  background-color: #ddd;
-}
-thead {
-  background-color: #ddd;
-}
+
 tr {
   color: #5b5757;
   text-align: center;

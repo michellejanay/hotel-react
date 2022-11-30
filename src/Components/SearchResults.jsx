@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import moment from "moment/moment";
 
-const SearchResults = (props) => {
 
+
+const SearchResults = (props) => {
   const [selectedIndex, setSelectedIndex] = useState();
   const handleClick = (ind) => {
-    return selectedIndex === ind ? setSelectedIndex(null) : setSelectedIndex(ind);
-  }
+    return selectedIndex === ind
+      ? setSelectedIndex(null)
+      : setSelectedIndex(ind);
+  };
+
+  const [titleRow, setTitleRow] = useState(true);
+  const handleClick0 = () => setTitleRow(!titleRow);
 
   return (
     <div className="Search-Results">
       <table>
         <thead>
-          <tr>
+          <tr 
+          onClick={()=>handleClick0}
+          className={titleRow ? "" : "tClicked"}>
             <th>ID</th>
             <th>Title</th>
             <th>First Name</th>
@@ -27,9 +35,9 @@ const SearchResults = (props) => {
         <tbody>
           {props.results.map((info, i) => (
             <tr
-              key={i}
-              onClick={()=>handleClick(i)}
-              className={selectedIndex === i ? "clicked" : "notClicked"}
+              key={info.id}
+              onClick={() => handleClick(i)}
+              className={selectedIndex === i ? "clicked" : ""}
             >
               <td>{info.id}</td>
               <td>{info.title}</td>
