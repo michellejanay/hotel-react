@@ -15,8 +15,6 @@ const SearchResults = (props) => {
   const handleId = (id) => {
     return setGuestId(id);
   };
-  // const [titleRow, setTitleRow] = useState(true);
-  // const handleClick0 = () => setTitleRow(!titleRow);
 
   return (
     <div className="Search-Results">

@@ -57,7 +57,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-
+.page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 tr {
   color: #5b5757;
   text-align: center;

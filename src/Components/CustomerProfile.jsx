@@ -18,12 +18,6 @@ const CustomerProfile = (prop) => {
       <p><strong>Email:</strong> {guest.email}</p>
       <p><strong>VIP:</strong> {guest.vip ? "true" : "false"}</p>
       <p><strong>Phone number:</strong> {guest.phoneNumber}</p>
-      {/* {prop.profileId.map((guest) => {
-        <p>
-          Customer {guest.id} Profile {guest.title}. {guest.firstName}{" "}
-          {guest.surname} VIP: {guest.vip}
-        </p>;
-      })} */}
     </div>
   );
 };
