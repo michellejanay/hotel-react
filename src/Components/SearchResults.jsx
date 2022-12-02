@@ -5,22 +5,21 @@ import moment from "moment/moment";
 
 const SearchResults = (props) => {
   const [selectedIndex, setSelectedIndex] = useState();
+  
   const handleClick = (ind) => {
     return selectedIndex === ind
       ? setSelectedIndex(null)
       : setSelectedIndex(ind);
   };
 
-  const [titleRow, setTitleRow] = useState(true);
-  const handleClick0 = () => setTitleRow(!titleRow);
+  // const [titleRow, setTitleRow] = useState(true);
+  // const handleClick0 = () => setTitleRow(!titleRow);
 
   return (
     <div className="Search-Results">
       <table>
         <thead>
-          <tr 
-          onClick={()=>handleClick0}
-          className={titleRow ? "" : "tClicked"}>
+          <tr> 
             <th>ID</th>
             <th>Title</th>
             <th>First Name</th>

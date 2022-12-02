@@ -3,15 +3,18 @@ import SearchButton from "./Components/SearchButton";
 
 const Search = (props) => {
   const [searchInput, setSearchInput] = useState("");
+
   const handleSearchInput = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     props.search(searchInput);
   };
+
   return (
     <div className="search">
       <div className="page-header">
