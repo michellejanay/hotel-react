@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import moment from "moment/moment";
-
-
+import CustomerProfile from "./CustomerProfile";
 
 const SearchResults = (props) => {
   const [selectedIndex, setSelectedIndex] = useState();
-  
+  const [guestId, setGuestId] = useState();
+
   const handleClick = (ind) => {
     return selectedIndex === ind
       ? setSelectedIndex(null)
       : setSelectedIndex(ind);
   };
 
+  const handleId = (id) => {
+    return setGuestId(id);
+  };
   // const [titleRow, setTitleRow] = useState(true);
   // const handleClick0 = () => setTitleRow(!titleRow);
 
@@ -19,7 +22,7 @@ const SearchResults = (props) => {
     <div className="Search-Results">
       <table>
         <thead>
-          <tr> 
+          <tr>
             <th>ID</th>
             <th>Title</th>
             <th>First Name</th>
@@ -29,6 +32,7 @@ const SearchResults = (props) => {
             <th>Check In Date</th>
             <th>Check Out Date</th>
             <th>Number of Nights</th>
+            <th>Profiles</th>
           </tr>
         </thead>
         <tbody>
@@ -52,10 +56,16 @@ const SearchResults = (props) => {
                   "days"
                 )}
               </td>
+              <td>
+                <button className="btn btn-dark" onClick={() => handleId(info.id)}>
+                  Show profile
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <CustomerProfile profileId={guestId} />
     </div>
   );
 };
