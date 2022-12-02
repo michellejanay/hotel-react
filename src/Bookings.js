@@ -15,7 +15,6 @@ const Bookings = () => {
     console.info("TO DO!", searchVal);
     let filtered = bookings.filter(({ firstName, surname }) => firstName === searchVal || surname === searchVal);
     setBookings(filtered)
-    //searchVal ? setBookings(filtered) : setBookings(bookings);
   };
 
   return (
