@@ -4,7 +4,7 @@ import CustomerProfile from "./CustomerProfile";
 
 const SearchResults = (props) => {
   const [selectedIndex, setSelectedIndex] = useState();
-  const [guestId, setGuestId] = useState();
+  const [guestId, setGuestId] = useState("");
 
   const handleClick = (ind) => {
     return selectedIndex === ind
