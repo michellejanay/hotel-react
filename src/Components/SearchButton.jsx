@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchButton = () => (
   <div>
-    <button className="btn btn-primary">Search</button>
+    <button className="btn btn-dark">Search</button>
   </div>
 );
 

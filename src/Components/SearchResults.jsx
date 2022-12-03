@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import moment from "moment/moment";
+import CustomerProfile from "./CustomerProfile";
 
 const SearchResults = (props) => {
-
   const [selectedIndex, setSelectedIndex] = useState();
+  const [guestId, setGuestId] = useState("");
+
   const handleClick = (ind) => {
-    return selectedIndex === ind ? setSelectedIndex(null) : setSelectedIndex(ind);
-  }
+    return selectedIndex === ind
+      ? setSelectedIndex(null)
+      : setSelectedIndex(ind);
+  };
+
+  const handleId = (id) => {
+    return setGuestId(id);
+  };
 
   return (
     <div className="Search-Results">
@@ -22,14 +30,15 @@ const SearchResults = (props) => {
             <th>Check In Date</th>
             <th>Check Out Date</th>
             <th>Number of Nights</th>
+            <th>Profiles</th>
           </tr>
         </thead>
         <tbody>
           {props.results.map((info, i) => (
             <tr
-              key={i}
-              onClick={()=>handleClick(i)}
-              className={selectedIndex === i ? "clicked" : "notClicked"}
+              key={info.id}
+              onClick={() => handleClick(i)}
+              className={selectedIndex === i ? "clicked" : ""}
             >
               <td>{info.id}</td>
               <td>{info.title}</td>
@@ -45,10 +54,16 @@ const SearchResults = (props) => {
                   "days"
                 )}
               </td>
+              <td>
+                <button className="btn btn-dark" onClick={() => handleId(info.id)}>
+                  Show profile
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <CustomerProfile profileId={guestId} />
     </div>
   );
 };

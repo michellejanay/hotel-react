@@ -57,14 +57,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-table tr:hover {
-  background-color: #ddd;
-}
-thead {
-  background-color: #ddd;
+.page-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 tr {
   color: #5b5757;
@@ -100,12 +96,11 @@ table th {
   padding-top: 15px;
 }
 .clicked {
-  background-color: black;
-  color: white;
+  background-color: violet;
+  color: black;
 }
 .notClicked{
   background-color: white;
-  color: black;
 }
 .Hotel-Info {
   list-style-type: none;
