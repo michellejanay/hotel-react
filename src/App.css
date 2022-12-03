@@ -22,6 +22,8 @@ header {
   width: 4rem;
   border-radius: 50%;
   padding: 0.5rem 2rem;
+  background-color: black;
+  margin-left: 2rem;
 }
 .Card-Holder {
   grid-row: 2;
@@ -57,7 +59,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-.page-header{
+.page-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +101,7 @@ table th {
   background-color: violet;
   color: black;
 }
-.notClicked{
+.notClicked {
   background-color: white;
 }
 .Hotel-Info {
