@@ -32,7 +32,7 @@ const Search = (props) => {
                 value={searchInput}
                 onChange={handleSearchInput}
               />
-              <SearchButton />
+              <SearchButton onClick={handleSearchInput}/>
             </div>
           </form>
         </div>
