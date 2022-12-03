@@ -11,17 +11,20 @@ const Bookings = () => {
   //   .then((response) => response.json())
   //   .then((data) => setLoading(data))
   // })
-  
+
   useEffect(() => {
     fetch("https://cyf-react.glitch.me")
       .then((response) => response.json())
-      .then((data) => setBookings(data))
+      .then((data) => setBookings(data));
   }, []);
 
   const search = (searchVal) => {
     console.info("TO DO!", searchVal);
-    let filtered = bookings.filter(({firstName, surname}) => firstName === searchVal || surname === searchVal);
-    setBookings(filtered)
+    let filtered = bookings.filter(
+      ({ firstName, surname }) =>
+        firstName === searchVal || surname === searchVal
+    );
+    setBookings(filtered);
   };
 
   return (
