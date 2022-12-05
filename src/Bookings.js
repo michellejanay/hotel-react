@@ -22,7 +22,7 @@ const Bookings = () => {
     console.info("TO DO!", searchVal);
     let filtered = bookings.filter(
       ({ firstName, surname }) =>
-        firstName === searchVal || surname === searchVal
+        firstName.includes(searchVal) || surname.includes(searchVal)
     );
     setBookings(filtered);
   };

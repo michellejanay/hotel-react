@@ -5,6 +5,7 @@ import CustomerProfile from "./CustomerProfile";
 const SearchResults = (props) => {
   const [selectedIndex, setSelectedIndex] = useState();
   const [guestId, setGuestId] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (ind) => {
     return selectedIndex === ind
@@ -14,6 +15,10 @@ const SearchResults = (props) => {
 
   const handleId = (id) => {
     return setGuestId(id);
+  };
+
+  const toggle = () => {
+    setIsOpen((opened) => !opened);
   };
 
   return (
@@ -55,7 +60,13 @@ const SearchResults = (props) => {
                 )}
               </td>
               <td>
-                <button className="btn btn-dark" onClick={() => handleId(info.id)}>
+                <button
+                  className="btn btn-dark"
+                  onClick={() => {
+                    toggle();
+                    handleId(info.id);
+                  }}
+                >
                   Show profile
                 </button>
               </td>
@@ -63,7 +74,7 @@ const SearchResults = (props) => {
           ))}
         </tbody>
       </table>
-      <CustomerProfile profileId={guestId} />
+      {isOpen && <CustomerProfile profileId={guestId} />}
     </div>
   );
 };
