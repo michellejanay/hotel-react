@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 import React from "react";
-import { Order } from "./Components/Order";
+import { Order } from "./components/Order";
 
 const Restaurant = () => {
   

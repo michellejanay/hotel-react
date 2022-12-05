@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchButton from "./Components/SearchButton";
+import SearchButton from "./components/SearchButton";
 
 const Search = (props) => {
   const [searchInput, setSearchInput] = useState("");
@@ -32,7 +32,7 @@ const Search = (props) => {
                 value={searchInput}
                 onChange={handleSearchInput}
               />
-              <SearchButton onClick={handleSearchInput}/>
+              <SearchButton onClick={handleSearchInput} />
             </div>
           </form>
         </div>
