@@ -4,13 +4,13 @@ import SearchResults from "./components/SearchResults.jsx";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   fetch("https://cyf-react.glitch.me/error")
-  //   .then((response) => response.json())
-  //   .then((data) => setLoading(data))
-  // })
+  useEffect(() => {
+    fetch("https://cyf-react.glitch.me/error")
+    .then((response) => response.json())
+    .then((data) => setLoading(data))
+  })
 
   useEffect(() => {
     fetch("https://cyf-react.glitch.me")
