@@ -4,18 +4,25 @@ import SearchResults from "./components/SearchResults.jsx";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("Loading...")
 
   useEffect(() => {
-    fetch("https://cyf-react.glitch.me/error")
-    .then((response) => response.json())
-    .then((data) => setLoading(data))
-  })
-
-  useEffect(() => {
-    fetch("https://cyf-react.glitch.me")
-      .then((response) => response.json())
-      .then((data) => setBookings(data));
+    fetch("https://cyf-react.glitch.me/")
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw Error("Oops! Something went wrong");
+      })
+      .then((data) => {
+        setLoading(true);
+        setBookings(data);
+      })
+      .catch(error => {
+        console.log(error);
+        setError("Oops! Something went wrong")
+      });
   }, []);
 
   const search = (searchVal) => {
@@ -31,19 +38,11 @@ const Bookings = () => {
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        <SearchResults results={bookings} />
+        {loading ? <SearchResults results={bookings} /> : <p>{error}</p>}
       </div>
     </div>
   );
 
-  // return (
-  //   <div className="App-content">
-  //     <div className="container">
-  //       <Search search={search} />
-  //       <SearchResults results={bookings} />
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Bookings;
